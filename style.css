@@ -1,0 +1,217 @@
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+    background: #030712;
+    color: white;
+    overflow-x: hidden;
+    position: relative;
+
+
+
+    z-index: -2;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #101013;
+    color: white;
+    margin-bottom: 0px;
+}
+
+.logo img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
+
+.nav-bar a {
+    text-decoration: none;
+    gap: 60px;
+    align-items: center;
+    padding: 10px;
+    color: white;
+    transition: color 0.3s ease, border-bottom 0.3s ease;
+    border-bottom: 2px solid transparent;
+}
+
+.nav-bar a:hover {
+    color: #c084fc;
+}
+
+.nav-bar a.active {
+    color: #a855f7;
+    border-bottom: 2px solid #a855f7;
+}
+
+.lettalk {
+    background: rgba(15, 15, 25, 0.6);
+    color: #c084fc;
+    border: 1px solid #a855f7;
+    padding: 10px 24px;
+    border-radius: 9999px;
+    /* Makes it a pill shape */
+    font-weight: 500;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+}
+
+.small-text {
+    font-size: 1rem;
+    color: white;
+    background-color: black;
+    padding: 4px 8px;
+}
+
+.hero-content {
+    margin: 0;
+    background-image:
+        /* url('my-portifolio.jpg'), */
+        radial-gradient(circle at 30% 20%, rgba(139, 92, 246, 0.15), transparent 25%),
+        radial-gradient(circle at 70% 50%, rgba(59, 130, 246, 0.12), transparent 30%);
+    background-color: #030712;
+    background-position: right bottom, 0 0, 0 0;
+    background-size: 250px 250px, auto, auto;
+    background-repeat: no-repeat, no-repeat, no-repeat;
+    background-blend-mode: multiply, normal, normal;
+    min-height: 400px;
+}
+
+.lettalk:hover {
+    background: rgba(168, 85, 247, 0.1);
+    box-shadow: 0 0 15px rgba(168, 85, 247, 0.4);
+}
+
+.hero-section {
+    padding-left: 40px;
+    background: black;
+    margin-top: 0;
+    padding-top: 0;
+}
+
+.hero-buttons {
+    margin-top: 30px;
+}
+
+.dot-icon {
+    color: green;
+    font-size: 50px;
+    margin-right: 10px;
+}
+
+.main-heading {
+    font-size: 4rem;
+    color: white;
+
+}
+
+.highlight {
+    font-size: 3.rem;
+    background: linear-gradient(to right, #7c3aed, #3b82f6);
+
+    /* The magic properties to clip it to the text */
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.description {
+    margin-top: 20px;
+    font-size: 1.2rem;
+    color: white;
+}
+
+
+.view-work {
+    background: linear-gradient(135deg, #6366f1, #3b82f6);
+    color: #ffffff;
+    padding: 12px 28px;
+    border-radius: 8px;
+    /* Slightly rounded corners */
+    font-weight: 500;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    border: none;
+    cursor: pointer;
+    transition: opacity 0.2s ease;
+}
+
+.download-cv {
+    padding: 12px 28px;
+    border-radius: 8px;
+    /* Slightly rounded corners */
+    font-weight: 500;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    border: none;
+    cursor: pointer;
+    transition: opacity 0.2s ease;
+    margin-left: 20px;
+}
+
+.lang-icon {
+    display: flex;
+    gap: 40px;
+    margin-top: 30px;
+    margin-left: 200px;
+}
+
+.language img {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+    border-radius: 20px;
+    margin-right: 10px;
+}
+
+.about-section {
+    margin-top: 80px;
+    margin-left: 40px;
+}
+
+.about-description {
+    display: flex;
+    margin-left: 40px;
+    gap: 60px;
+    color: rgb(201, 197, 197);
+
+}
+
+.section-heading {
+    font-size: 1.5rem;
+    background: linear-gradient(to right, #7c3aed, #3b82f6);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 20px;
+}
+
+.this-txt {
+    font-size: 1.7rem;
+    color: white;
+    /* max-width: 600px; */
+    font-style: Arial, sans-serif;
+}
+
+.skills-badge {
+    color: rgb(201, 197, 197);
+}
+
+.badge-value {
+    background: linear-gradient(to right, #7c3aed, #3b82f6);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-left: 45px;
+    font-size: 1.5rem;
+}
