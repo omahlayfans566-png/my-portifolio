@@ -302,6 +302,100 @@ body {
     }
 }
 
+/* Services Section */
+.services-section {
+    margin-top: 80px;
+    margin-left: 40px;
+    margin-right: 40px;
+    padding-bottom: 60px;
+}
+
+.services-intro {
+    font-size: 1.1rem;
+    color: rgb(201, 197, 197);
+    margin-left: 40px;
+    margin-bottom: 50px;
+}
+
+.services-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    margin-left: 40px;
+}
+
+.service-card {
+    background: rgba(30, 27, 46, 0.5);
+    border: 1px solid rgba(168, 85, 247, 0.2);
+    border-radius: 12px;
+    padding: 30px;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+}
+
+.service-card:hover {
+    background: rgba(30, 27, 46, 0.8);
+    border: 1px solid rgba(168, 85, 247, 0.5);
+    box-shadow: 0 0 20px rgba(168, 85, 247, 0.2);
+    transform: translateY(-5px);
+}
+
+.service-icon {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.service-title {
+    font-size: 1.3rem;
+    color: white;
+    margin: 15px 0;
+    background: linear-gradient(to right, #7c3aed, #3b82f6);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.service-desc {
+    font-size: 0.95rem;
+    color: rgb(201, 197, 197);
+    line-height: 1.6;
+}
+
+/* Mobile Responsive - Services */
+@media (max-width: 768px) {
+    .services-section {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    .services-intro {
+        margin-left: 0;
+        font-size: 1rem;
+    }
+
+    .services-container {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        margin-left: 0;
+    }
+
+    .service-card {
+        padding: 20px;
+    }
+
+    .service-icon {
+        font-size: 2rem;
+    }
+
+    .service-title {
+        font-size: 1.1rem;
+    }
+
+    .service-desc {
+        font-size: 0.9rem;
+    }
+}
+
 /* Mobile Responsive - Phones */
 @media (max-width: 480px) {
     .header {
