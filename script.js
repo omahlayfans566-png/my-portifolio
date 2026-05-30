@@ -1,7 +1,34 @@
 console.log('Portfolio loaded');
 
-// Handle nav bar active state
+// Hamburger Menu Toggle
 document.addEventListener('DOMContentLoaded', function () {
+    const menuToggle = document.getElementById('menu-toggle');
+    const sidebar = document.getElementById('sidebar');
+    const sidebarLinks = document.querySelectorAll('.sidebar-link');
+
+    // Toggle sidebar
+    menuToggle.addEventListener('click', function () {
+        sidebar.classList.toggle('active');
+        menuToggle.classList.toggle('active');
+    });
+
+    // Close sidebar when a link is clicked
+    sidebarLinks.forEach(link => {
+        link.addEventListener('click', function () {
+            sidebar.classList.remove('active');
+            menuToggle.classList.remove('active');
+        });
+    });
+
+    // Close sidebar when clicking outside
+    document.addEventListener('click', function (event) {
+        if (!event.target.closest('.header')) {
+            sidebar.classList.remove('active');
+            menuToggle.classList.remove('active');
+        }
+    });
+
+    // Handle nav bar active state
     const navLinks = document.querySelectorAll('.nav-bar a');
 
     // Get the saved active link from localStorage
