@@ -16,10 +16,11 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 20px;
+    padding-top: 20px;
     background-color: black;
     color: white;
     margin-bottom: 0px;
+
 }
 
 .logo img {
@@ -32,10 +33,11 @@ body {
     text-decoration: none;
     gap: 60px;
     align-items: center;
-    padding: 10px;
+    padding: 10px 20px;
     color: white;
     transition: color 0.3s ease, border-bottom 0.3s ease;
     border-bottom: 2px solid transparent;
+    min-height: auto;
 }
 
 .nav-bar a:hover {
@@ -68,6 +70,15 @@ body {
     color: white;
     background-color: black;
     padding: 4px 8px;
+}
+.hero-image {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: auto;
+    z-index: -1;
+    opacity: 0.2;
 }
 
 .hero-content {
