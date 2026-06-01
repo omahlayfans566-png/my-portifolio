@@ -16,7 +16,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-top: 20px;
+    padding-top: 0px;
     background-color: black;
     color: white;
     margin-bottom: 0px;
@@ -123,8 +123,8 @@ body {
     padding-left: 40px;
     background: black;
     margin-top: 0;
-    padding-top: 5px;
-    padding-bottom: 30px;
+    padding-top: 0px;
+    padding-bottom: 0px;
     flex: 1;
     display: flex;
     flex-direction: column;
