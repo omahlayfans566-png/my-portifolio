@@ -661,3 +661,40 @@ body {
         font-size: 0.9rem;
     }
 }
+
+/*project-section*/
+
+.projects{
+    padding:50px 20px;
+}
+
+.projects h2{
+    text-align:center;
+    margin-bottom:30px;
+}
+
+.project-card{
+    background:#fff;
+    padding:20px;
+    border-radius:15px;
+    box-shadow:0 4px 10px rgba(0,0,0,.1);
+    margin-bottom:20px;
+}
+
+.project-card img{
+    width:100%;
+    border-radius:10px;
+}
+
+.project-card h3{
+    margin:15px 0;
+}
+
+.project-card a{
+    display:inline-block;
+    padding:10px 20px;
+    background:purple;
+    color:white;
+    text-decoration:none;
+    border-radius:8px;
+}
