@@ -698,3 +698,9 @@ body {
     text-decoration:none;
     border-radius:8px;
 }
+.project-card p{
+    font-size: 16px;
+    line-height: 1.6;
+    color: #555;
+    margin: 10px 0 15px;
+}
