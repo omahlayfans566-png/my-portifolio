@@ -256,7 +256,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 /* ===========================
-   CONTACT FORM
+   CONTACT FORM - WhatsApp Integration
    =========================== */
 document.addEventListener('DOMContentLoaded', () => {
     const form = document.getElementById('contactForm');
@@ -275,21 +275,37 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     if (form) {
-        form.addEventListener('submit', async (e) => {
+        form.addEventListener('submit', (e) => {
             e.preventDefault();
-            const btn = form.querySelector('button[type="submit"]');
-            const originalContent = btn.innerHTML;
 
-            btn.innerHTML = '<span>Sending...</span><i class="fas fa-spinner fa-spin"></i>';
-            btn.disabled = true;
+            // Get form values
+            const name = document.getElementById('name').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const subject = document.getElementById('subject').value.trim();
+            const message = document.getElementById('message').value.trim();
 
-            // Simulate send (replace with actual backend/FormSubmit/EmailJS)
-            await new Promise(resolve => setTimeout(resolve, 1500));
+            // Basic validation
+            if (!name || !email || !subject || !message) {
+                showToast('Please fill in all fields!', false);
+                return;
+            }
 
-            btn.innerHTML = originalContent;
-            btn.disabled = false;
+            // Build a clean WhatsApp message
+            const whatsappText =
+                `*New Portfolio Message* 🚀\n\n` +
+                `*Name:* ${name}\n` +
+                `*Email:* ${email}\n` +
+                `*Subject:* ${subject}\n\n` +
+                `*Message:*\n${message}`;
+
+            // Encode and open WhatsApp
+            const encoded = encodeURIComponent(whatsappText);
+            const whatsappURL = `https://wa.me/2349058741644?text=${encoded}`;
+            window.open(whatsappURL, '_blank');
+
+            // Reset form and notify
             form.reset();
-            showToast('Message sent successfully! I\'ll get back to you soon.', true);
+            showToast('Opening WhatsApp... message ready to send!', true);
         });
     }
 });
