@@ -2313,6 +2313,22 @@ body.light-mode .mobile-menu {
 
 /* Mobile: 480px */
 @media (max-width: 480px) {
+    .container {
+        padding: 0 16px;
+    }
+
+    .section {
+        padding: 60px 0;
+    }
+
+    .section-title {
+        font-size: 1.75rem;
+    }
+
+    .nav-container {
+        padding: 0 16px;
+    }
+
     .hero-actions {
         flex-direction: column;
         align-items: stretch;
@@ -2325,6 +2341,10 @@ body.light-mode .mobile-menu {
     .hero-card-wrapper {
         width: 200px;
         height: 200px;
+    }
+
+    .hero-description {
+        font-size: 1rem;
     }
 
     .floating-badge {
@@ -2341,14 +2361,55 @@ body.light-mode .mobile-menu {
 
     .stats-container {
         gap: 0;
+        flex-direction: column;
     }
 
     .stat-item {
         min-width: 100px;
+        padding: 12px;
+    }
+
+    .about-img-decoration {
+        display: none;
+    }
+
+    .about-exp-badge {
+        bottom: 10px;
+        right: 10px;
+        padding: 12px 16px;
+    }
+
+    .exp-number {
+        font-size: 1.5rem;
+    }
+
+    .about-actions {
+        flex-direction: column;
+    }
+
+    .about-actions .btn {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .featured-project {
+        padding: 16px;
+    }
+
+    .featured-project-grid {
+        gap: 24px;
     }
 
     .featured-project-title {
-        font-size: 1.8rem;
+        font-size: 1.5rem;
+    }
+
+    .featured-project-desc {
+        font-size: 0.875rem;
     }
 
     .featured-project-actions {
@@ -2356,7 +2417,46 @@ body.light-mode .mobile-menu {
     }
 
     .featured-project-actions .btn {
+        width: 100%;
         justify-content: center;
+    }
+
+    .project-card-body {
+        padding: 16px;
+    }
+
+    .service-card {
+        padding: 20px;
+    }
+
+    .testimonial-card {
+        padding: 20px;
+    }
+
+    .contact-info-card {
+        padding: 14px 16px;
+    }
+
+    .contact-form {
+        padding: 20px;
+    }
+
+    .form-group input,
+    .form-group textarea {
+        font-size: 16px;
+        /* Prevents zoom on iOS */
+    }
+
+    .timeline-item {
+        padding-left: 48px;
+    }
+
+    .timeline-item.right {
+        padding-left: 48px;
+    }
+
+    .timeline-content {
+        padding: 20px;
     }
 
     .footer-top {
@@ -2379,4 +2479,139 @@ body.light-mode .mobile-menu {
 /* AOS custom animations */
 [data-aos] {
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+
+/* ===========================
+   EXTRA MOBILE IMPROVEMENTS
+   =========================== */
+
+/* Touch-friendly tap targets */
+@media (max-width: 768px) {
+    .btn {
+        min-height: 44px;
+        min-width: 44px;
+    }
+
+    .social-link,
+    .footer-social,
+    .theme-toggle {
+        min-width: 44px;
+        min-height: 44px;
+    }
+
+    /* Better touch spacing for nav */
+    .mobile-link {
+        padding: 16px 32px;
+        min-height: 48px;
+    }
+
+    /* Improved readability */
+    body {
+        -webkit-text-size-adjust: 100%;
+        text-size-adjust: 100%;
+    }
+
+    /* Smooth touch scrolling */
+    * {
+        -webkit-tap-highlight-color: rgba(168, 85, 247, 0.1);
+    }
+
+    /* Better touch for form inputs */
+    .form-group input,
+    .form-group textarea,
+    .filter-btn {
+        min-height: 44px;
+    }
+
+    /* Improve featured project spacing */
+    .featured-project-badge {
+        font-size: 0.75rem;
+        padding: 5px 12px;
+    }
+
+    .featured-tech-stack {
+        gap: 6px;
+    }
+
+    .tech-tag {
+        font-size: 0.75rem;
+        padding: 4px 10px;
+    }
+
+    /* Better project cards on mobile */
+    .project-card {
+        margin-bottom: 16px;
+    }
+
+    /* Timeline improvements */
+    .timeline::before {
+        left: 12px;
+    }
+
+    .timeline-dot {
+        left: 12px;
+        width: 12px;
+        height: 12px;
+    }
+
+    .timeline-item,
+    .timeline-item.right {
+        padding-left: 40px;
+    }
+
+    /* Stat items stack better */
+    .stats-strip {
+        padding: 24px 16px;
+    }
+
+    /* Service features better spacing */
+    .service-features li {
+        font-size: 0.8rem;
+    }
+}
+
+/* Very small screens */
+@media (max-width: 360px) {
+    .hero-title {
+        font-size: 2rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1.2rem;
+    }
+
+    .section-title {
+        font-size: 1.5rem;
+    }
+
+    .featured-project-title {
+        font-size: 1.3rem;
+    }
+
+    .btn {
+        font-size: 0.85rem;
+        padding: 10px 20px;
+    }
+
+    .stat-number {
+        font-size: 1.5rem;
+    }
+}
+
+/* Landscape mode on mobile */
+@media (max-width: 768px) and (orientation: landscape) {
+    .hero {
+        min-height: auto;
+        padding: 40px 0;
+    }
+
+    .hero-card-wrapper {
+        width: 180px;
+        height: 180px;
+    }
+
+    .section {
+        padding: 48px 0;
+    }
 }
