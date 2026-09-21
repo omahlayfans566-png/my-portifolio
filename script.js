@@ -300,7 +300,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             // Encode and open WhatsApp
             const encoded = encodeURIComponent(whatsappText);
-            const whatsappURL = `https://wa.me/2349058741644?text=${encoded}`;
+            const whatsappURL = `https://wa.me/2348026455569?text=${encoded}`;
             window.open(whatsappURL, '_blank');
 
             // Reset form and notify
